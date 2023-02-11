@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 2: Online-Library</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- header section starts  -->
+
+    <header class="header">
+      <div class="header-1">
+        <a href="/" class="logo">
+          <i class="fas fa-book"><h1>TLL:</h1> </i>
+          The Local Library
+        </a>
+
+        <form action="" class="search-form">
+          <input
+            type="search"
+            name=""
+            placeholder="search here..."
+            id="search-box"
+          />
+          <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+        <div class="icons">
+          <div id="search-btn" class="fas fa-search"></div>
+          <a href="/saved" class="fas fa-heart"></a>
+          {{#if logged_in}}
+           <a href="/logout" id="login-btn" class="fas fa-user"></a>
+         {{else}}
+          <a href="/login" id="login-btn" class="fas fa-user"></a>
+         {{/if}}
+          
+        </div>
+      </div>
+
+      <div class="header-2">
+        <nav class="navbar">
+          <a href="#home">Home</a>
+        
+          <a href="#featured">Featured</a>
+    
+          <div class="dropdown">
+            <button class="dropbtn"><a href="#arrivals">Genres</a></button>
+            <div class="dropdown-content">
+          
+              <table>
+              
+                <tr>
+                  <td><a href="/genre/fiction">Fiction </a></td>
+                  <td> <a href="/genre/adventure">Adventure</a></td> 
+                 
+                </tr>
+                <tr>
+                  <td><a href="/genre/drama">Drama</a></td>
+                  <td><a href="/genre/science">Science</a></td> 
+             
+                </tr>
+                <tr>
+                  <td>  <a href="/genre/history">History</a></td>
+                  <td><a href="/genre/philosophy">Philosophy</a></td> 
+             
+                </tr>
+          
+              </table>
+
+            </div>
+          </div>
+          
+          
+
+          <!-- ***NOTE:**** YOU MADE A CHANGE HERE YOU HAVE TO CHANGE THE LINK NAME TO USING LIBRARY -->
+          <a href="#features">Features</a>
+                    <!-- ***NOTE:**** YOU MADE A CHANGE HERE YOU HAVE TO CHANGE THE LINK NAME TO USING LIBRARY -->
+        </nav>
+      </div>
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- bottom navbar  -->
+
+    <nav class="bottom-navbar">
+      <a href="#home" class="fas fa-home"></a>
+      <a href="#featured" class="fas fa-list"></a>
+      <a href="#arrivals" class="fas fa-tags"></a>
+      <a href="#reviews" class="fas fa-comments"></a>
+      <a href="#blogs" class="fas fa-blog"></a>
+    </nav>
+
+    {{!-- <!-- login form  -->
+
+    <div class="login-form-container">
+      <div id="close-login-btn" class="fas fa-times"></div>
+
+      <form id="sign-in" style="display: none;">
+        <h3>sign in</h3>
+        <span>username</span>
+        <input
+          type="email"
+          class="box"
+          placeholder="enter your email"
+          id="email-login"
+        />
+        <span>password</span>
+        <input
+          type="password"
+          class="box"
+          placeholder="enter your password"
+          id="password-login"
+        />
+        <input type="submit" value="sign in" class="btn" />
+        <p>don't have an account? <a class="signup-btn">Create one</a></p>
+      </form>
+
+      <!-- Sign-Up -->
+      <form id="sign-up" style="display: none;">
+        <h3>sign up</h3>
+        <span>name</span>
+        <input
+          type="name"
+          class="box"
+          placeholder="enter your name"
+          id="name-signup"
+        />
+         <span>email</span>
+        <input
+          type="name"
+          class="box"
+          placeholder="enter your email"
+          id="email-signup"
+        />
+        <span>password</span>
+        <input
+          type="password"
+          class="box"
+          placeholder="enter your password"
+          id="password-signup"
+        />
+        <input type="submit" value="sign up" class="btn" />
+      </form>
+ 
+
+    <!-- Log-Out-->
+    <form id="log-out" style="display: none;">     
+      <input type="submit" value="Log Out" class="btn" />
+    </form>
+  </div> --}}
+
+    <!-- home section starts  -->
+
+    <section class="home" id="home">
+      <div class="row">
+        <div class="content">
+          <h3>November's Top 15</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+            deserunt nostrum accusamus. Nam alias sit necessitatibus, aliquid ex
+            minima at!
+          </p>
+          <a href="#" class="btn">Browse</a>
+        </div>
+
+        <div class="swiper books-slider">
+          <div class="swiper-wrapper">
+            <!-- <a href="#" class="swiper-slide"
+              ><img src="image/book-1.png" alt=""
+            /></a>
+            <a href="#" class="swiper-slide"
+              ><img src="image/book-2.png" alt=""
+            /></a>
+            <a href="#" class="swiper-slide"
+              ><img src="image/book-3.png" alt=""
+            /></a>
+            <a href="#" class="swiper-slide"
+              ><img src="image/book-4.png" alt=""
+            /></a>
+            <a href="#" class="swiper-slide"
+              ><img src="image/book-5.png" alt=""
+            /></a>
+            <a href="#" class="swiper-slide"
+              ><img src="image/book-6.png" alt=""
+            /></a> -->
+          </div>
+          <img src="/image/stand.png" class="stand" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- home section ends  -->
+
+    {{{body}}}
+
+    <!-- newsletter section starts -->
+
+    <section class="newsletter">
+      <form action="">
+        <h3>subscribe for newsletter</h3>
+        <input
+          type="email"
+          name=""
+          placeholder="enter your email"
+          id="newsletter-email"
+          class="box"
+        />
+        <input type="submit" value="subscribe" class="btn" />
+      </form>
+    </section>
+
+    <!-- newsletter section ends -->
+
+    <!-- arrivals section starts  -->
+    <!-- books Section -->
+
+    <section class="arrivals" id="arrivals">
+      <h1 class="heading"><span>Popular Genres</span></h1>
+
+      <div class="swiper arrivals-slider">
+        <div class="swiper-wrapper">
+          <a href="/genre/fiction" class="swiper-slide box">
+            <div class="image">
+              <img src="/image/book-1.png" alt="" />
+            </div>
+            <div class="content">
+              <h3>Fiction</h3>
+            </div>
+          </a>
+
+          <a href="/genre/adventure" class="swiper-slide box">
+            <div class="image">
+              <img src="/image/book-2.png" alt="" />
+            </div>
+            <div class="content">
+              <h3>Adventure</h3>
+            </div>
+          </a>
+
+          <a href="/genre/drama" class="swiper-slide box">
+            <div class="image">
+              <img src="/image/book-3.png" alt="" />
+            </div>
+            <div class="content">
+              <h3>Drama</h3>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- arrivals section ends -->
+
+    <!-- deal section starts  -->
+
+    <!-- ***NOTE YOU MADE CHANGES HERE YOU HAVE TO CHANGE THE CLASS ETC ****-->
+    <section class="deal">
+      <div class="content">
+        <h1>Upcoming features</h1>
+        <h3>Checkout Cart, Buying, And Much More!</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+          perspiciatis in atque dolore tempora quaerat at fuga dolorum natus
+          velit.
+        </p>
+        <a href="#newsletter-email" class="btn">Stay Updated</a>
+      </div>
+
+      
+      <div class="image">
+        <img src="/image/deal-img.jpg" alt="" />
+      </div>
+    </section>
+
+    <!-- deal section ends -->
+
+    <!-- reviews section starts  -->
+
+    <section class="reviews" id="features">
+      <!-- ***NOTE: YOU HAVE TO CHANGE THE CLASS OF THIS SECTION TO USING THE LIBRARY. BUT KEEP IT UNTIL WE FIX STUFF**** -->
+      <h1 class="heading"><span>Features</span></h1>
+
+      <div class="swiper reviews-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide box">
+            <img src="/image/pic-1.png" alt="" />
+            <h3>search books by category</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Aspernatur nihil ipsa placeat. Aperiam at sint, eos ex similique
+              facere hic.
+            </p>
+          </div>
+
+          <div class="swiper-slide box">
+            <img src="/image/pic-2.png" alt="" />
+            <h3>search books by name</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Aspernatur nihil ipsa placeat. Aperiam at sint, eos ex similique
+              facere hic.
+            </p>
+          </div>
+
+          <div class="swiper-slide box">
+            <img src="/image/pic-3.png" alt="" />
+            <h3>Save your favourite books</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Aspernatur nihil ipsa placeat. Aperiam at sint, eos ex similique
+              facere hic.
+            </p>
+          </div>
+    
+
+          <div class="swiper-slide box">
+            <img src="/image/pic-5.png" alt="" />
+            <h3>create your own account</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Aspernatur nihil ipsa placeat. Aperiam at sint, eos ex similique
+              facere hic.
+            </p>
+          </div>
+  
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+
+    <!-- reviews section ends -->
+
+    
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+   
+
+        <div class="box">
+          <h3>contact info</h3>
+          <a href="#"> <i class="fas fa-phone"></i> (416)000-0000 </a>
+          <a href="#"> <i class="fas fa-envelope"></i> notareallibrary@Toronto.ca </a>
+          <a href="#"> <i class="fas fa-envelope"></i> Address: 1234 im right behind you, Toronto, Ontario M1M 2N2 </a>
+        </div>
+      </div>
+
+      <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+      </div>
+
+    
+    </section>
+
+    <!-- footer section ends -->
+ 
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="/js/script.js"></script>
+    {{#if looges_in}}
+    <script src="/js/saveBook.js"></script>
+    {{/if}}
+  </body>
+</html>
