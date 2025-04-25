@@ -57,6 +57,7 @@ This program was created by:
 Icaro Araujo
 Glenroy Bastien
 Renato Cordova
+Yaaseen Khan
 
 ## Testing
 
